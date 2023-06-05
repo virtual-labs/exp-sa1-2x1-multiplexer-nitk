@@ -1,0 +1,7 @@
+
+/home/runner/work/exp-sa1-2x1-multiplexer-nitk/exp-sa1-2x1-multiplexer-nitk/experiment/simulation/js/check 6.js
+  15:3   warning  'myQuestions' is not defined  no-undef
+  37:56  warning  'myQuestions' is not defined  no-undef
+
+✖ 2 problems (0 errors, 2 warnings)
+
