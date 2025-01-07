@@ -1,3 +1,61 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const button1 = document.getElementById("button1");
+  const button2 = document.getElementById("button2");
+  const heading1 = document.getElementById("heading1");
+  const heading2 = document.getElementById("heading2");
+
+  // Ensure both headings are initially hidden
+  heading1.style.display = "none";
+  heading2.style.display = "none";
+
+  // Add click event listeners to the buttons
+  button1.addEventListener("click", () => {
+    // console.log('SIMULATOR - I button clicked');
+    heading1.style.display = "block"; // Show heading1
+    heading2.style.display = "none"; // Hide heading2
+  });
+
+  button2.addEventListener("click", () => {
+    // console.log('SIMULATOR - II button clicked');
+    heading2.style.display = "block"; // Show heading2
+    heading1.style.display = "none"; // Hide heading1
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button1 = document.getElementById("button1");
+  const button2 = document.getElementById("button2");
+  const buttonDiv = document.getElementById("buttonDiv"); // Target the buttonDiv container
+  const gridContainer = document.querySelector(".grid-container"); // Grid container reference
+  const simulatorTable = document.querySelector(".simulator-table"); // Reference to the class
+  const input1 = document.getElementById("input1");
+  const input2 = document.getElementById("input2");
+  const sectionToPrint1 = document.getElementById("section-to-print");
+  const sectionToPrint2 = document.getElementById("section-to-print2"); // Reference to #section-to-print2
+
+  // Function to hide the buttonDiv and show the simulator-table
+  function showSimulatorTable() {
+    buttonDiv.style.display = "none"; // Hide the button container
+    gridContainer.style.display = "block"; // Show the grid container if required
+    simulatorTable.style.display = "block"; // Make the simulator-table visible
+    input1.style.display = "flex";
+    sectionToPrint1.style.display = "table";
+  }
+
+  // Function to make #input2 and #section-to-print2 visible
+  function showInput2() {
+    buttonDiv.style.display = "none"; // Hide the button container
+    gridContainer.style.display = "block"; // Show the grid container if required
+    simulatorTable.style.display = "block"; // Make the simulator-table visible
+    input2.style.display = "flex";
+    sectionToPrint2.style.display = "table"; // Make #section-to-print2 visible as a table
+  }
+
+  // Add click event listeners to both buttons
+  button1.addEventListener("click", showSimulatorTable);
+  button2.addEventListener("click", showInput2); // Trigger visibility of #input2 and #section-to-print2
+});
+
 // ===== Button and input =====
 const getI1 = document.getElementById("I1");
 const getI2 = document.getElementById("I2");
@@ -241,3 +299,90 @@ resetBtn.addEventListener("click", () => {
     }
   }
 });
+
+function Refresh() {
+  window.location = window.location.href;
+}
+
+
+// for simulator 2 functions
+
+(function () {
+  // ===== Button and input =====
+  const getO = document.getElementById("o");
+  const getFo = document.getElementById("fo");
+
+  const checkBtn = document.getElementById("check-btn");
+  const resetBtn = document.getElementById("reset-btn");
+  const tableBody2 = document.getElementById("table-body2");
+
+  // ===== Create a td tag =====
+  const createTd = (value) => {
+    const td = document.createElement("td");
+    td.innerText = value;
+    td.classList.add("border");
+    td.classList.add("border-gray-400");
+    return td;
+  };
+
+  // ===== Creating a row =====
+  const createRow = (o, fo, fault) => {
+    const tr = document.createElement("tr");
+    const td1 = createTd(o);
+    tr.appendChild(td1);
+    const td2 = createTd(fo);
+    tr.appendChild(td2);
+    const td3 = createTd(fault);
+    if (fault == "No Fault") {
+      td3.classList.add("bg-green-200");
+    } else {
+      td3.classList.add("bg-red-200");
+    }
+    tr.appendChild(td3);
+    tableBody2.appendChild(tr);
+  };
+
+  // ===== Validate Input =====
+  const checkNum = (num) => {
+    if (!isNaN(num) && num != "" && (num == 1) | (num == 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  // ===== Faults =====
+  const getResult = (o, fo) => {
+    if (o == fo) {
+      return "No Fault";
+    } else if (o == 0 && fo == 1) {
+      return "A SA1, B SA1, C SA1, E SA1, F SA1, G SA1, H SA1";
+    } else if (o == 1 && fo == 0) {
+      return "A SA1, C SA1, D SA1";
+    } else {
+      return "Not SA0 or SA1 fault";
+    }
+  };
+
+  // ===== Getting Result =====
+  checkBtn.addEventListener("click", () => {
+    const o = getO.value;
+    const fo = getFo.value;
+
+    if (checkNum(o) && checkNum(fo)) {
+      const result = getResult(o, fo);
+      createRow(o, fo, result);
+    }
+    getO.value = "";
+    getFo.value = "";
+  });
+
+  resetBtn.addEventListener("click", () => {
+    let len = tableBody2.rows.length;
+    if (len > 2) {
+      for (let i = 2; i < len; i++) {
+        tableBody2.deleteRow(2);
+      }
+    }
+  });
+})();
