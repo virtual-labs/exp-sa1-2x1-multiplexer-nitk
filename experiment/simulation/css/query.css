@@ -1,0 +1,621 @@
+/* rem and em don not depend on html font size in media queries, Instead 1rem = 1em = 16px
+rem: root font size
+em:current font size
+*/
+
+/* *************only screen******* */
+
+/* **************************** */
+/* Below 1344px (Smaller Desktops) */
+/* **************************** */
+
+@media (min-width: 1200px) {
+  body {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  .canvas__div {
+    padding: 20px;
+  }
+
+  .observation {
+    transform: scale(0.8);
+  }
+
+  .stuck-at-selector {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 0.5rem;
+    right: 35px;
+    bottom: -25px;
+    padding: 4px;
+  }
+  .div1,
+  .div2 {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    position: relative;
+  }
+
+  /* #truthTable {
+    transform: scale(1.7);
+  } */
+}
+
+/* **************************** */
+/* Below 1200px (Lanscape Tablets) */
+/* **************************** */
+
+@media (max-width: 75em) {
+  .title-div h1 {
+    font-size: 2.5rem;
+  }
+  .task-title {
+    font-size: 2rem;
+  }
+  .tool-menu {
+    font-size: 2rem;
+    gap: 2rem;
+  }
+  .icons {
+    width: 3rem;
+    height: 3rem;
+  }
+  .ctrl-icons {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .tool-list span {
+    font-size: 1.2rem;
+  }
+  .canvas {
+    display: block;
+  }
+  .div__control img {
+    width: 3rem;
+    height: 2.8rem;
+  }
+  .div1,
+  .div2 {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    position: relative;
+  }
+
+  .canvas__div {
+    padding: 30px;
+  }
+  .practice {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #truthTable {
+    transform: scale(2);
+  }
+  #buttonDiv {
+    padding: 2rem;
+  }
+  #heading1 {
+    font-size: 20px;
+  }
+  #heading2 {
+    font-size: 20px;
+  }
+  #section-to-print th,
+  #section-to-print td {
+    padding: 0.5rem; /* Add padding for better readability */
+  }
+}
+
+/* **************************** */
+/* Below 944px ( Tablets) */
+/* **************************** */
+
+@media (max-width: 59em) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+  .tool-link:link,
+  .tool-link:visited {
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    flex-direction: column;
+  }
+
+  .title-div h1 {
+    font-size: 1.8rem;
+  }
+  .sidebar {
+    position: fixed;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    width: 100%;
+    backdrop-filter: blur(10rem);
+    z-index: 101;
+    justify-content: space-evenly;
+    border-radius: 0;
+    scroll-behavior: auto;
+    margin: 0;
+  }
+  .main {
+    grid-column: 1/-1;
+  }
+  .tool-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    width: 100%;
+    font-size: 2.4rem;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  #image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.85);
+    margin-left: -525px;
+  }
+
+  .canvas {
+    display: block;
+  }
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .canvas__div {
+    /* grid-template-columns: 1fr; */
+    padding: 85px;
+  }
+  .canvas {
+    display: block;
+    border: none;
+  }
+  .footer {
+    margin-bottom: 78px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  #buttonDiv {
+    padding: 6rem;
+  }
+}
+
+/* **************************** */
+/* Below 820px (Smaller Tablets) */
+/* **************************** */
+@media (max-width: 48em) {
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+
+  .canvas__div {
+    padding: 80px;
+  }
+  .canvas {
+    display: block;
+    border: none;
+  }
+  .tool-list span {
+    font-size: 1.6rem;
+  }
+
+  .footer {
+    margin-bottom: 78px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .stuck-at-selector {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 0.5rem;
+    bottom: -10px;
+    padding: 4px;
+  }
+  #buttonDiv {
+    padding: 7rem;
+  }
+  .title-div h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* **************************** */
+/* Below 704px (Smaller Tablets) */
+/* **************************** */
+@media (max-width: 44em) {
+  .canvas__div {
+    padding: 30px;
+  }
+  .stuck-at-selector {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 0.5rem;
+    bottom: -80px;
+    padding: 4px;
+  }
+
+  .img-div {
+    flex-direction: column;
+  }
+  .title-div {
+    gap: 0rem;
+    text-align: center;
+  }
+  .round {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  .logo-div {
+    width: 6.5rem;
+  }
+  .main__task-div:nth-child(4) {
+    margin-bottom: 6rem;
+  }
+
+  .cross-img {
+    width: 60%;
+  }
+  .canvas {
+    display: block;
+    border: none;
+  }
+  .footer {
+    margin-bottom: 78px;
+  }
+
+  /* Ensure div1 and div2 are positioned without overlapping */
+  .div1,
+  .div2 {
+    width: 100%; /* Full width of container */
+    position: relative; /* Position relative for internal absolute elements */
+    padding: 15px; /* Add padding to prevent overlap */
+    /* Add spacing between divs */
+    box-sizing: border-box; /* Ensures padding doesn’t add to width */
+  }
+  .div1 {
+    margin-bottom: 80px; /* Only .div1 will have the larger margin */
+    /* background-color: red; */
+  }
+
+  .truth-table {
+    position: relative;
+    left: 0px;
+    transform: scale(1.2);
+  }
+  .truth-th,
+  .truth-td {
+    border: 1px solid #000;
+    padding: 5px; /* Reduced padding for smaller cells */
+    font-size: 12px; /* Smaller font size for compact table */
+    line-height: 0.5; /* Reduced line height to compress the row height */
+    height: 10px; /* Reduced height of the rows */
+  }
+  /* #truthTable {
+    transform: scale(2);
+    margin-left: -20px;
+  } */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .practice {
+    margin-bottom: 60px;
+  }
+
+  .title-div h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid-container img {
+    width: 120%;
+    height: 100%;
+  }
+
+  #buttonDiv {
+    padding: 10rem;
+  }
+  #heading1 {
+    font-size: 16px;
+  }
+  #heading2 {
+    font-size: 16px;
+  }
+}
+
+/* **************************** */
+/* Below 540px (Smaller Tablets) */
+/* **************************** */
+@media (max-width: 34em) {
+  .canvas__div {
+    grid-template-columns: 1fr;
+  }
+  .div1,
+  .div2 {
+    width: 100%; /* Full width of container */
+    position: relative; /* Position relative for internal absolute elements */
+    padding: 15px; /* Add padding to prevent overlap */
+    /* Add spacing between divs */
+    box-sizing: border-box; /* Ensures padding doesn’t add to width */
+  }
+  .div1 {
+    margin-bottom: 60px; /* Only .div1 will have the larger margin */
+  }
+
+  .div2 {
+    /* margin-bottom: 20px;  */
+  }
+
+  .grid-container img {
+    width: 130%;
+    height: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .stuck-at-selector {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 0.5rem;
+    bottom: -40px;
+    padding: 4px;
+  }
+
+  .title-div h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-div {
+    width: 4.5rem;
+  }
+  .div__control {
+    gap: 2rem;
+  }
+  .ctrl-icons {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .tool-menu {
+    gap: 1.5rem;
+  }
+  .tool-list span {
+    font-size: 1.2rem;
+  }
+  .task-title {
+    font-size: 1.7rem;
+  }
+  canvas {
+    width: 100%;
+  }
+  label,
+  select,
+  input,
+  p {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  .main {
+    gap: 0.5rem;
+  }
+  .main-section {
+    gap: 0.5rem;
+  }
+  .sidebar {
+    border-radius: 0;
+  }
+  .canvas {
+    display: block;
+    border: none;
+  }
+  .div__control img {
+    width: 2.7rem;
+    height: 2.5rem;
+  }
+  .tooltip {
+    font-size: 1rem;
+  }
+  .footer {
+    margin-bottom: 78px;
+  }
+
+  .practice {
+    margin: 0;
+    padding: 0;
+  }
+
+  #buttonDiv {
+    /* margin: 20px; */
+    margin: 14%;
+  }
+
+  #heading1 {
+    font-size: 15px;
+  }
+  #heading2 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 30em) {
+  .div1,
+  .div2 {
+    width: 100%; /* Full width of container */
+    position: relative; /* Position relative for internal absolute elements */
+    padding: 15px; /* Add padding to prevent overlap */
+    /* Add spacing between divs */
+    box-sizing: border-box; /* Ensures padding doesn’t add to width */
+  }
+  #buttonDiv {
+    /* margin: 20px; */
+    margin: 14%;
+  }
+  .div1 {
+    margin-bottom: 60px;
+  }
+
+  .div2 {
+    /* margin-bottom: 20px;  */
+  }
+  .title-div h1 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 27em) {
+  .sidebar {
+    position: fixed;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    width: 100%;
+    backdrop-filter: blur(10rem);
+    z-index: 101;
+    justify-content: space-evenly;
+    border-radius: 0;
+    scroll-behavior: auto;
+  }
+
+  #buttonDiv {
+    /* margin: 20px; */
+    margin: 14%;
+    margin-left: -14px;
+  }
+  .tool-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+    font-size: 2.4rem;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  .canvas__div {
+    min-height: calc(100vh - 7 * 5.6rem);
+    overflow: hidden;
+    margin: 0;
+    padding: 0rem;
+  }
+  .apparatus-screen {
+    grid-template-columns: 1fr;
+  }
+  .practice {
+    margin: 0;
+    padding: 0;
+  }
+  .quiz-div {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .answers {
+    grid-template-columns: 1fr;
+  }
+  .practice-step-no {
+    width: 3rem;
+    height: 3rem;
+  }
+  .btn-next,
+  .btn-reset,
+  .btn-top {
+    width: 3rem;
+    height: 3rem;
+  }
+  .footer {
+    margin-bottom: 78px;
+  }
+
+  .canvas__div {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .div1,
+  .div2 {
+    width: 100%; /* Full width of container */
+    position: relative; /* Position relative for internal absolute elements */
+    padding: 15px; /* Add padding to prevent overlap */
+    /* Add spacing between divs */
+    box-sizing: border-box; /* Ensures padding doesn’t add to width */
+  }
+  .div1 {
+    margin-bottom: 60px; /* Only .div1 will have the larger margin */
+  }
+  .title-div h1 {
+    font-size: 1rem;
+  }
+  #section-to-print {
+    border-collapse: collapse; /* Removes space between borders */
+    border-spacing: 0; /* Ensures no additional spacing */
+  }
+  #section-to-print th,
+  #section-to-print td {
+    padding: 0.1rem; /* Add padding for better readability */
+    margin: 0; /* Reset any margin inside the cells */
+    /* line-height: 1; */
+  }
+  #section-to-print td {
+    line-height: 0.9;
+  }
+
+  #section-to-print2 {
+    border-collapse: collapse; /* Removes space between borders */
+    border-spacing: 0; /* Ensures no additional spacing */
+  }
+  #section-to-print2 th,
+  #section-to-print2 td {
+    padding: 0.1rem; /* Add padding for better readability */
+    margin: 0; /* Reset any margin inside the cells */
+    /* line-height: 1; */
+  }
+  #section-to-print2 td {
+    line-height: 1;
+  }
+}
+/* 
+  
+  - Font sizes (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  
+  - Spacing system (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+  
+   */

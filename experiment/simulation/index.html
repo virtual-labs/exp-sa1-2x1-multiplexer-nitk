@@ -1,137 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/tailwind.css">
-    <link rel="stylesheet" href="../css/tailwind1.css">
-</head>
-<style>
-     body{
-        background-color: white;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    h2{
-        text-align: center;
-        color: black;
-        font-size: 3em;
-    }
-    nav{
-   width: 100%;
-   height: 75px;
-   background-color: #FFFFFF;
-	line-height: 75px;
-	padding: 0px 100px;
-	position:fixed;
-	z-index: 1;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js" 
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+    <title>Virtual Lab</title>
+    <script src='https://cdn.plot.ly/plotly-2.18.2.min.js'></script>
 
-}
-nav
-{
-   position: fixed;
-   top: 0px;
-}
-nav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-nav{
-    background: lightcyan;
-    height: 80px;
-    width: 100%;
-    position:fixed;
-    top:0;
+  </head>
+  <body>
+    <div class="container">
+    <div class="title-div-container">
+      <div class="title-div">
+          <div class="logo-div">
+            <a href="#"><img src="images/logo_nitk.png" alt="Logo" class="logo" /></a>
+          </div>
+          <h1>Detection of SA1 faults on a VLSI circuit for 2x1 multiplexer (mux)
+          </h1>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul class="tool-menu">
 
-}
-body{
-    margin:0px;
-}
+          
+          <li class="tool-list tool-practice" >
+            <a class="tool-link" title="Experiment"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Simulation</span>
+          </li>
 
-    nav ul{
-	float: center;
-}
+          
+          <!-- <li class="tool-list tool-practice" onclick="addToTable()">
+            <a class="tool-link" title="Run"
+              ><img src="./images/run.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Run</span>
+          </li> -->
 
+          <li class="tool-list tool-help" onclick="displayDiv(this)">
+            <a class="tool-link" title="Help" onclick="Refresh()"
+              ><img src="./images/bluecwdull.svg" alt="Help" class="icons"
+              ></a
+              >
+              <span>Refresh</span>
+          </li>
+          
+        </ul>
+      </div> 
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Simulation</h3>
+           
+            <div class="canvas__div">
+              <!-- <div class="task-screen apparatus hide">
+              </div> -->
+              <div class="task-screen practice">
+                  <span id="Rfvalue" style="display:none ;"></span>
+                  <div>
+                    
+                 
+                  </div>
+                  <div id="buttonDiv">
+                    <div class="simulatorGroup">
+                      <label>
+                      </label>
+                      <button type="button" class="simButton" id="button1" >SIMULATOR - I</button>
+                    </div>
+                  
+                    <div class="simulatorGroup">
+                      <label>
+                      </label>
+                      <button type="button" class="simButton" id="button2" >SIMULATOR - II</button>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-container" style="display: none;">
+                    <div id="mainHeading">
+                      <h3 id="heading1" style="display: none;">SA1 Fault for 2x1 MUX</h3>
+                      <h3 id="heading2" style="display: none;">SA1 Fault Detector</h3>
+                    </div>
+                    <div class="div1">
+                      <img class="w-5/6" src="../images/pic.jpeg">
 
-nav ul li{
-	display: inline-block;
-	list-style: none;
-}
+                  </div>
+                  <div class="div2">
+                    <div class="stacked-container">
 
-nav ul li{
-	display: inline-block;
-	list-style: none;
-}
-nav ul li a{
-	color: black;
-	text-decoration: none;
-	font-size: 15px;
-	text-transform: uppercase;
-	padding: 0px 30px;
-}
+                      <div id="input2">
+                    <div class="mt-5">
+                      <input type="text" id="o" class="w-10 bg-green-200 text-center rounded-sm" placeholder="Y">
+                  </div>
+  
+                  <div class="text-center my-5">
+                      <input type="text" id="fo" class="w-10 bg-red-200 text-center rounded-sm" placeholder="Y'">
+                  </div>
+                </div>
+                <div id="input1">
+                      <div class="mt-5 input-group">
+                        <input type="text" id="S" class="w-10 bg-green-200 text-center rounded-sm" placeholder="S">
+                        <input type="text" id="I1" class="w-10 bg-green-200 text-center rounded-sm" placeholder="I0">
+                        <input type="text" id="I2" class="w-10 bg-green-200 text-center rounded-sm" placeholder="I1">
+                      </div>
+                      <div class="my-5 input-group">
+                        <input type="text" id="a" class="w-10 bg-red-200 text-center rounded-sm" placeholder="A">
+                        <input type="text" id="b" class="w-10 bg-red-200 text-center rounded-sm" placeholder="B">
+                        <input type="text" id="c" class="w-10 bg-red-200 text-center rounded-sm" placeholder="C">
+                        <input type="text" id="d" class="w-10 bg-red-200 text-center rounded-sm" placeholder="D">
+                        <input type="text" id="e" class="w-10 bg-red-200 text-center rounded-sm" placeholder="E">
+                        <input type="text" id="f" class="w-10 bg-red-200 text-center rounded-sm" placeholder="F">
+                        <input type="text" id="g" class="w-10 bg-red-200 text-center rounded-sm" placeholder="G">
+                        <input type="text" id="h" class="w-10 bg-red-200 text-center rounded-sm" placeholder="H">
+                      </div>
+                      </div>
+                   
+                <button id="check-btn"
+                class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-yellow-400 hover:bg-yellow-300">Check</button>
+              </div>  
+                  
+                  </div>
+                  </div>
+        <div class="simulator-table container1" style="display: none;">
+      <table id="section-to-print" class="w-full table border text-center">
+        <tbody id="table-body">
+          <tr><th colspan="5">Truth Table</th></tr>
+          <tr style="text-align: center;">
+            <th rowspan="2" class="border px-5 border-gray-400" style="width: 100px;">S I0 I1</th>
+            <th rowspan="2" class="border border-gray-400">SA1 Faults At</th>
+            <th class="border border-gray-400">Expected Output</th>
+            <th class="border border-gray-400">Final Output</th>
+          </tr>
+          <tr>
+            <th class="border border-gray-400">Y</th>
+            <th class="border border-gray-400">Y'</th>
+          </tr>
+        </tbody>
+      </table>
 
-nav ul li a:hover{
-	color: rgb(47, 179, 255);
-}
+      <table id="section-to-print2" class="w-full table border text-center">
+        <tbody id="table-body2">
+           <tr><th colspan="5">Truth Table</th></tr>
+          <tr>
+              <th class="border border-gray-400">Expected Output</th>
+              <th class="border border-gray-400">Final Output</th>
+              <th rowspan="2" class="border border-gray-400">Expected Faults Positions</th>
+          </tr>
+          <tr>
+              <th class="border border-gray-400">Y</th>
+              <th class="border border-gray-400">Y'</th>
+          </tr>
+      </tbody>
+  </table>
 
+      <div class="text-center mt-5">
+        <button id="reset-btn" class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-yellow-400 hover:bg-yellow-300">Reset</button>
 
-nav ul li .active{
-	color:rgb(9, 138, 243);
-}
-p{
-
-        color: black;
-        font-size: large;
-        text-align: center;
-        margin: 35px;
-    }
- .button2{
-    position: absolute;
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  left: 570px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4df1f7;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #18c3c9;
-}
-
-.button2:hover {background-color: #4df1f7}
-
-.button2:active {
-  background-color: #4df1f7;
-  box-shadow: 0 5px #18c3c9;
-  transform: translateY(4px);
-}
-</style>
-<body>
-
-    <h2>SIMULATION</h2>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <a class= "button2" href="./html/6i.simulator.html"style="text-decoration:none;">SIMULATOR - I</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <a class= "button2" href="./html/6ii.simulator_2.html"style="text-decoration:none;">SIMULATOR - II</a><br>
-    <script src="../js/check 6.js"></script>
-    <script src="../js/simulator.js"></script>
-    <script src="../js/simulator_2.js"></script>
-</body>
+    </div>
+        </div>
+        </div>
+          </div>
+          </div>
+         
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
+        </div>
+    </div>
+    <script defer src="js/script.js"></script>
+  </body>
 </html>
