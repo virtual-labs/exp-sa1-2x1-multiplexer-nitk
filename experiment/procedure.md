@@ -4,7 +4,7 @@
 
 1. Enter the input values of I<sub>0</sub>, I<sub>1</sub> and Select line(S).The inputs should be either 0 or 1.
 2. We can choose the position of the fault. A,B,C,D,E,F,G,H are the eight positions where the fault can occur.
-3. Select 'check' to run the simulation. The table gives the expected and final output. If a fault is detected, it will be highlighted in red.
+3. Select 'check' to run the simulation. The table gives the expected and final output. // If a fault is detected, it will be highlighted in red.
 4. If we want to enable faults in multiple places, input 1 should be given in those places.
 5. Select 'check' to run the simulation. The table gives the expected and final output. If a fault is detected, it will be highlighted in red.
 6. For further tests, repeat the above steps.
