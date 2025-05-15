@@ -39,7 +39,6 @@ Q = A'.I<sub>1</sub> + A.I<sub>0</sub>
 
 <p style="text-align:justify;">The truth table for 2x1 multiplexer is as follows:</p>
 
-<center>
 <table style="text-align:center;">
         <tr>
           <th>Select Line (S)</th>
@@ -54,9 +53,7 @@ Q = A'.I<sub>1</sub> + A.I<sub>0</sub>
           <td>I<sub>1</sub></td>
         </tr>
       </table>
-</center>
-
-<center>Table 1: 2x1 MUX Truth Table</center></br></br>
+Table 1: 2x1 MUX Truth Table</br></br>
 
 <p style="text-align:justify;">It contains 2 AND gates, a NOT gate and a OR gate.</p>
 
