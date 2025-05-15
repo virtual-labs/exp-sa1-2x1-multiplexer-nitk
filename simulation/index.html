@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js" 
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+    <title>Virtual Lab</title>
+    <script src='https://cdn.plot.ly/plotly-2.18.2.min.js'></script>
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="title-div-container">
+      <div class="title-div">
+          <div class="logo-div">
+            <a href="#"><img src="images/logo_nitk.png" alt="Logo" class="logo" /></a>
+          </div>
+          <h1>Detection of SA1 faults on a VLSI circuit for 2x1 multiplexer (mux)
+          </h1>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul class="tool-menu">
+
+          
+          <li class="tool-list tool-practice" >
+            <a class="tool-link" title="Experiment"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Simulation</span>
+          </li>
+
+          
+          <!-- <li class="tool-list tool-practice" onclick="addToTable()">
+            <a class="tool-link" title="Run"
+              ><img src="./images/run.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Run</span>
+          </li> -->
+
+          <li class="tool-list tool-help" onclick="displayDiv(this)">
+            <a class="tool-link" title="Help" onclick="Refresh()"
+              ><img src="./images/bluecwdull.svg" alt="Help" class="icons"
+              ></a
+              >
+              <span>Refresh</span>
+          </li>
+          
+        </ul>
+      </div> 
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Simulation</h3>
+           
+            <div class="canvas__div">
+              <!-- <div class="task-screen apparatus hide">
+              </div> -->
+              <div class="task-screen practice">
+                  <span id="Rfvalue" style="display:none ;"></span>
+                  <div>
+                    
+                 
+                  </div>
+                  <div id="buttonDiv">
+                    <div class="simulatorGroup">
+                      <label>
+                      </label>
+                      <button type="button" class="simButton" id="button1" >SIMULATOR - I</button>
+                    </div>
+                  
+                    <div class="simulatorGroup">
+                      <label>
+                      </label>
+                      <button type="button" class="simButton" id="button2" >SIMULATOR - II</button>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-container" style="display: none;">
+                    <div id="mainHeading">
+                      <h3 id="heading1" style="display: none;">SA1 Fault for 2x1 MUX</h3>
+                      <h3 id="heading2" style="display: none;">SA1 Fault Detector</h3>
+                    </div>
+                    <div class="div1">
+                      <img class="w-5/6" src="../images/pic.jpeg">
+
+                  </div>
+                  <div class="div2">
+                    <div class="stacked-container">
+
+                      <div id="input2">
+                    <div class="mt-5">
+                      <input type="text" id="o" class="w-10 bg-green-200 text-center rounded-sm" placeholder="Y">
+                  </div>
+  
+                  <div class="text-center my-5">
+                      <input type="text" id="fo" class="w-10 bg-red-200 text-center rounded-sm" placeholder="Y'">
+                  </div>
+                </div>
+                <div id="input1">
+                      <div class="mt-5 input-group">
+                        <input type="text" id="S" class="w-10 bg-green-200 text-center rounded-sm" placeholder="S">
+                        <input type="text" id="I1" class="w-10 bg-green-200 text-center rounded-sm" placeholder="I0">
+                        <input type="text" id="I2" class="w-10 bg-green-200 text-center rounded-sm" placeholder="I1">
+                      </div>
+                      <div class="my-5 input-group">
+                        <input type="text" id="a" class="w-10 bg-red-200 text-center rounded-sm" placeholder="A">
+                        <input type="text" id="b" class="w-10 bg-red-200 text-center rounded-sm" placeholder="B">
+                        <input type="text" id="c" class="w-10 bg-red-200 text-center rounded-sm" placeholder="C">
+                        <input type="text" id="d" class="w-10 bg-red-200 text-center rounded-sm" placeholder="D">
+                        <input type="text" id="e" class="w-10 bg-red-200 text-center rounded-sm" placeholder="E">
+                        <input type="text" id="f" class="w-10 bg-red-200 text-center rounded-sm" placeholder="F">
+                        <input type="text" id="g" class="w-10 bg-red-200 text-center rounded-sm" placeholder="G">
+                        <input type="text" id="h" class="w-10 bg-red-200 text-center rounded-sm" placeholder="H">
+                      </div>
+                      </div>
+                   
+                <button id="check-btn"
+                class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-yellow-400 hover:bg-yellow-300">Check</button>
+              </div>  
+                  
+                  </div>
+                  </div>
+        <div class="simulator-table container1" style="display: none;">
+      <table id="section-to-print" class="w-full table border text-center">
+        <tbody id="table-body">
+          <tr><th colspan="5">Truth Table</th></tr>
+          <tr style="text-align: center;">
+            <th rowspan="2" class="border px-5 border-gray-400" style="width: 100px;">S I0 I1</th>
+            <th rowspan="2" class="border border-gray-400">SA1 Faults At</th>
+            <th class="border border-gray-400">Expected Output</th>
+            <th class="border border-gray-400">Final Output</th>
+          </tr>
+          <tr>
+            <th class="border border-gray-400">Y</th>
+            <th class="border border-gray-400">Y'</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="section-to-print2" class="w-full table border text-center">
+        <tbody id="table-body2">
+           <tr><th colspan="5">Truth Table</th></tr>
+          <tr>
+              <th class="border border-gray-400">Expected Output</th>
+              <th class="border border-gray-400">Final Output</th>
+              <th rowspan="2" class="border border-gray-400">Expected Faults Positions</th>
+          </tr>
+          <tr>
+              <th class="border border-gray-400">Y</th>
+              <th class="border border-gray-400">Y'</th>
+          </tr>
+      </tbody>
+  </table>
+
+      <div class="text-center mt-5">
+        <button id="reset-btn" class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-yellow-400 hover:bg-yellow-300">Reset</button>
+
+    </div>
+        </div>
+        </div>
+          </div>
+          </div>
+         
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
+        </div>
+    </div>
+    <script defer src="js/script.js"></script>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

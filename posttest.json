@@ -1,0 +1,94 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Stuck at fault occur/s due to  ___________ .",
+      "answers": {
+        "a": "when a line is permanently stuck to Vdd or ground",
+        "b": "when two lines are connected when they should not be connected",
+        "c": "None of these",
+        "d": "Both a and b"
+      },
+      "explanations": {
+        "a": "A stuck-at fault happens when a signal line is permanently fixed to either a logic high (Vdd) or low (ground), causing incorrect behavior.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the expected and final output, when input combinations are S=0, I<sub>0</sub>=1, I<sub>1</sub>=0 and 2x1 multiplexer has a SA1 fault at the Select line ?",
+      "answers": {
+        "a": "0 , 0",
+        "b": "0 , 1",
+        "c": "1 , 0",
+        "d": "1 , 1"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "With a SA1 fault at the select line, the select line is stuck at 1, so the MUX should select I1 (0), but due to the fault, the final output is incorrectly 1.",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+    ,
+    {
+      "question": "Stuck-at 1 in gives faulty output when the faulty position ___________ .",
+      "answers": {
+        "a": "Is given logic 0",
+        "b": "is given logic 1",
+        "c": "None of these",
+        "d": "Both a and b"
+      },
+      "explanations": {
+        "a": "A stuck-at-1 fault results in a faulty output when the faulty position is intended to be logic 0 but is stuck at logic 1.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+    ,
+    {
+      "question": "With a multiple fault model with k types of faults, a circuit with n fault sites will have number of faults equal to",
+      "answers": {
+        "a": "(k+1)^n",
+        "b": "(k+1)^n -1",
+        "c": "k^n",
+        "d": "k^n -1"
+      },
+      "explanations": {
+        "a": "",
+        "b": " The total number of faults in a multiple fault model with k types of faults is (k+1)^n - 1, as it accounts for all possible fault combinations except the case where there are no faults at all.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+    ,
+    {
+      "question": "Fault simulation detects ___________ .",
+      "answers": {
+        "a": "Fault coverage",
+        "b": "Set of undetected faults",
+        "c": "Faulty outputs",
+        "d": "All of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "Fault simulation detects fault coverage, identifies undetected faults, and checks for faulty outputs by simulating the behavior of a circuit under different fault conditions."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+
+  ]
+}
