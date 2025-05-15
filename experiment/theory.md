@@ -24,8 +24,8 @@
 
 <p style="text-align:justify;">As we only have one control line, (A) then we can only switch 21 inputs and in this simple example, the 2-input multiplexer connects one of two 1-bit sources to a common output, producing a 2-to-1-line multiplexer. We can confirm this in the following Boolean expression.</p>
 
-<center><img src="./images/2x1mux.jpg"/></center></br>
-<center>2x1 MUX Design</center></br>
+<center><img src="./images/2x1mux.jpg" width="50%"/></center></br>
+<center>2x1 MUX Design</center></br></br>
 
 <p style="text-align:justify;">Q = A'.I<sub>0</sub>'.I<sub>1</sub> + A'.I<sub>0</sub>.I<sub>1</sub> + A.I<sub>0</sub>.I'1 + A.I<sub>0</sub>.I<sub>1</sub></p>
 
@@ -56,13 +56,13 @@ Q = A'.I<sub>1</sub> + A.I<sub>0</sub>
       </table>
 </center>
 
-<center>2x1 MUX Truth Table</center></br>
+<center>2x1 MUX Truth Table</center></br></br>
 
 <p style="text-align:justify;">It contains 2 AND gates, a NOT gate and a OR gate.</p>
 
-<center><img src="./images/theory_lg.jpg"/></center></br>
+<center><img src="./images/theory_lg.jpg" width="50%"/></center></br>
 
-<center>2x1 MUX Logic Circuit</center></br>
+<center>2x1 MUX Logic Circuit</center></br></br>
 
 <p style="text-align:justify;">The final output expression for 2x1 multiplexer is Y= I<sub>0</sub>S’+I<sub>1</sub>S.</p>
 
@@ -72,8 +72,8 @@ Q = A'.I<sub>1</sub> + A.I<sub>0</sub>
 
 <p style="text-align:justify;">This experiment focuses on SA1 faults of 2x1 Multiplexer.</p>
 
-<center><img src="./images/pic.jpeg"/></center></br>
-<center>SA1 Fault locations in 2x1 MUX</center></br>
+<center><img src="./images/pic.jpeg" width="50%"></center></br>
+<center>SA1 Fault locations in 2x1 MUX</center></br></br>
 
 <p style="text-align:justify;">We can have SA1 faults at 8 possible locations. When the expected output is different from the final output the fault gets detected. When the expected output is not different from the final output the fault does not get detected, despite having a fault.The expected output is the output of the circuit when there is no fault and the final output is the output of the circuit with SA1 fault present at some location(s).</p>
 
