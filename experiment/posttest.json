@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Stuck at fault occur/s due to  ___________ .",
+      "question": "Stuck at fault occur/s due to  ___________ .",
       "answers": {
         "a": "when a line is permanently stuck to Vdd or ground",
         "b": "when two lines are connected when they should not be connected",
@@ -10,7 +10,7 @@
         "d": "Both a and b"
       },
       "explanations": {
-        "a": "",
+        "a": "A stuck-at fault happens when a signal line is permanently fixed to either a logic high (Vdd) or low (ground), causing incorrect behavior.",
         "b": "",
         "c": "",
         "d": ""
@@ -29,7 +29,7 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": "",
+        "c": "With a SA1 fault at the select line, the select line is stuck at 1, so the MUX should select I1 (0), but due to the fault, the final output is incorrectly 1.",
         "d": ""
       },
       "correctAnswer": "c",
@@ -45,7 +45,7 @@
         "d": "Both a and b"
       },
       "explanations": {
-        "a": "",
+        "a": "A stuck-at-1 fault results in a faulty output when the faulty position is intended to be logic 0 but is stuck at logic 1.",
         "b": "",
         "c": "",
         "d": ""
@@ -64,7 +64,7 @@
       },
       "explanations": {
         "a": "",
-        "b": "",
+        "b": " The total number of faults in a multiple fault model with k types of faults is (k+1)^n - 1, as it accounts for all possible fault combinations except the case where there are no faults at all.",
         "c": "",
         "d": ""
       },
@@ -84,7 +84,7 @@
         "a": "",
         "b": "",
         "c": "",
-        "d": ""
+        "d": "Fault simulation detects fault coverage, identifies undetected faults, and checks for faulty outputs by simulating the behavior of a circuit under different fault conditions."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
