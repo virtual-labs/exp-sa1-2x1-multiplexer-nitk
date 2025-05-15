@@ -11,7 +11,7 @@
       },
       "explanations": {
         "a": "",
-        "b": "",
+        "b": " In a multiplexer, selection lines determine which one of the multiple input lines is routed to the output.",
         "c": "",
         "d": ""
       },
@@ -29,7 +29,7 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": "",
+        "c": "A 2:1 multiplexer needs only 1 select line to choose between its two input lines.",
         "d": ""
       },
       "correctAnswer": "c",
@@ -45,7 +45,7 @@
       },
       "explanations": {
         "a": "",
-        "b": "",
+        "b": "A multiplexer selects data from multiple sources and transmits it over a single line, making it ideal for combining signals.",
         "c": "",
         "d": ""
       },
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "A 2:1 Multiplexer is connected as shown in figure. What output Boolean expression is implemented by the circuit?",
+      "question": "A 2:1 Multiplexer has input lines 0 and B, with A connected to the select line. What is the output Boolean expression implemented by the circuit?",
       "answers": {
         "a": "Y = A.B",
         "b": "Y = A+B",
@@ -64,7 +64,7 @@
         "a": "",
         "b": "",
         "c": "",
-        "d": ""
+        "d": "When input 0 is tied to logic 0 and input 1 is B, and A is the select line, the MUX outputs B only when A = 0, hence Y = A'.B."
       },
       "correctAnswer": "d",
       "difficulty": "advanced"
@@ -78,7 +78,7 @@
         "d": "Many decimal outputs and accepts the selected information"
       },
       "explanations": {
-        "a": "",
+        "a": "A multiplexer chooses one input from multiple digital sources and forwards it to the output based on select lines.",
         "b": "",
         "c": "",
         "d": ""
