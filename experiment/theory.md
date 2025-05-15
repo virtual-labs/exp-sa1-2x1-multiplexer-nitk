@@ -56,7 +56,7 @@ Q = A'.I<sub>1</sub> + A.I<sub>0</sub>
       </table>
 </center>
 
-<center>2x1 MUX Truth Table</center></br></br>
+<center>Table 1: 2x1 MUX Truth Table</center></br></br>
 
 <p style="text-align:justify;">It contains 2 AND gates, a NOT gate and a OR gate.</p>
 
