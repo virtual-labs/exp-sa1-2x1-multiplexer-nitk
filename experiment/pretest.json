@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "In a multiplexer, the selection of a particular input line is controlled by ___________ .",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Data controller",
+        "b": "Selected lines",
+        "c": "Logic gates",
+        "d": "Both data controller and selected lines"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": " In a multiplexer, selection lines determine which one of the multiple input lines is routed to the output.",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "How many select lines are required for a 2:1 Mux ?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Two",
+        "b": "Four",
+        "c": "One",
+        "d": "Five"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "A 2:1 multiplexer needs only 1 select line to choose between its two input lines.",
+        "d": ""
       },
       "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A combinational logic circuit that is used when it is desired to send data from two or more source through a single transmission line is known as ___________ .",
+      "answers": {
+        "a": "Encoder",
+        "b": "Multiplexer",
+        "c": "Decoder",
+        "d": "De-Multiplexer"
+      },
+      "explanations": {
+        "a": "",
+        "b": "A multiplexer selects data from multiple sources and transmits it over a single line, making it ideal for combining signals.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+    {
+      "question": "A 2:1 Multiplexer has input lines 0 and B, with A connected to the select line. What is the output Boolean expression implemented by the circuit?",
+      "answers": {
+        "a": "Y = A.B",
+        "b": "Y = A+B",
+        "c": "Y = A'",
+        "d": "Y = A'.B"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "When input 0 is tied to logic 0 and input 1 is B, and A is the select line, the MUX outputs B only when A = 0, hence Y = A'.B."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "A digital multiplexer is a combinational circuit that selects ___________ .",
+      "answers": {
+        "a": "One digital information from several sources and transmits the selected one",
+        "b": "Many digital information and convert them into one",
+        "c": "Many decimal inputs and transmits the selected information",
+        "d": "Many decimal outputs and accepts the selected information"
+      },
+      "explanations": {
+        "a": "A multiplexer chooses one input from multiple digital sources and forwards it to the output based on select lines.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
     }
   ]
 }
